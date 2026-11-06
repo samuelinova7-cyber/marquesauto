@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #080a0e;
+    color: #f1f5f9;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0e14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2430;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.85;
+  }
+  60% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 22px rgba(229, 192, 91, 0.7));
+  }
+}
+
+@keyframes ray-float {
+  0%, 100% {
+    opacity: 0.3;
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: rotate(3deg) scale(1.08);
+  }
+}
+
+.animate-shine-sweep {
+  animation: shine-sweep 4.5s ease-in-out infinite;
+}
+
+.animate-shine-fast {
+  animation: shine-sweep 2.8s ease-in-out infinite;
+}
+
+.animate-gold-glow {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-ray-float {
+  animation: ray-float 5s ease-in-out infinite;
+}
+
+/* Continuous smooth scrolling marquee for yellow header banner */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* WhatsApp Green Light Glow & Radar Wave Effects */
+@keyframes green-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.65), 0 0 35px rgba(37, 211, 102, 0.4), 0 0 60px rgba(37, 211, 102, 0.25);
+    filter: drop-shadow(0 0 8px rgba(37, 211, 102, 0.7));
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.95), 0 0 50px rgba(37, 211, 102, 0.7), 0 0 85px rgba(37, 211, 102, 0.45);
+    filter: drop-shadow(0 0 16px rgba(37, 211, 102, 0.95));
+  }
+}
+
+@keyframes green-radar-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+.animate-green-glow {
+  animation: green-pulse-glow 2.4s ease-in-out infinite;
+}
+
+.animate-green-radar {
+  animation: green-radar-ring 2.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-green-radar-delayed {
+  animation: green-radar-ring 2.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+  animation-delay: 1.3s;
+}
+
+/* Logo Brilliant Sheen & Sparkle Effects */
+@keyframes sparkle-twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.2) rotate(0deg);
+  }
+  40%, 60% {
+    opacity: 1;
+    transform: scale(1.25) rotate(90deg);
+  }
+}
+
+.animate-sparkle {
+  animation: sparkle-twinkle 3.2s ease-in-out infinite;
+}
+
+@keyframes gold-sweep-highlight {
+  0% {
+    transform: translateX(-180%) skewX(-25deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(260%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+.animate-gold-sweep-highlight {
+  animation: gold-sweep-highlight 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+

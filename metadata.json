@@ -1,0 +1,8 @@
+{
+  "name": "mea",
+  "description": "Proteção e brilho extremo para veículos de alto padrão. Especialistas em PPF (Paint Protection Film), vitrificação cerâmica 9H, polimento técnico e detalhamento automotivo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
