@@ -59,8 +59,8 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({ onOpenQuoteModal }) 
                   </span>
                 </div>
 
-                {/* Card tag */}
-                <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-[#080a0e]/90 border border-slate-700/80 p-3.5 backdrop-blur-md flex items-center justify-between z-10">
+                {/* Card tag (Desktop only, overlaying) */}
+                <div className="hidden sm:flex absolute bottom-4 left-4 right-4 rounded-xl bg-[#080a0e]/90 border border-slate-700/80 p-3.5 backdrop-blur-md items-center justify-between z-10">
                   <div className="flex items-center gap-2">
                     <Sparkles className="h-4 w-4 text-[#e5c05b]" />
                     <span className="text-xs font-bold text-white uppercase tracking-wider">
@@ -71,6 +71,19 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({ onOpenQuoteModal }) 
                     Online via WhatsApp
                   </span>
                 </div>
+              </div>
+
+              {/* Mobile version: Card tag placed cleanly BELOW the video (não em cima do vídeo) */}
+              <div className="sm:hidden mt-3 rounded-xl bg-[#080a0e]/95 border border-[#d4af37]/40 p-3 flex items-center justify-between shadow-lg">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="h-3.5 w-3.5 text-[#e5c05b]" />
+                  <span className="text-[11px] font-bold text-white uppercase tracking-wider">
+                    Orçamentos & Avaliação Técnica
+                  </span>
+                </div>
+                <span className="rounded bg-[#d4af37] px-2 py-0.5 text-[9px] font-extrabold uppercase text-[#080a0e]">
+                  Online via WhatsApp
+                </span>
               </div>
             </div>
 

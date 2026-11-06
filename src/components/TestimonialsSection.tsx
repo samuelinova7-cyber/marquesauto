@@ -62,9 +62,8 @@ export const TestimonialsSection: React.FC = () => {
                   <div className="h-full w-36 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-90 animate-shine-sweep" />
                 </div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between z-10">
+                {/* Card tag on desktop (overlaying) */}
+                <div className="hidden sm:flex absolute bottom-3 left-3 right-3 items-center justify-between z-10">
                   <span className="text-xs font-mono font-bold text-[#e5c05b] bg-black/75 px-2.5 py-1 rounded border border-[#d4af37]/40 backdrop-blur-sm">
                     Google Avaliações 5.0 ★
                   </span>
@@ -72,6 +71,16 @@ export const TestimonialsSection: React.FC = () => {
                     100% Verificado
                   </span>
                 </div>
+              </div>
+
+              {/* Mobile version: Badge placed cleanly BELOW the video (não em cima do vídeo) */}
+              <div className="sm:hidden mt-2.5 flex items-center justify-between rounded-lg border border-[#d4af37]/35 bg-[#080a0e]/95 p-2.5 shadow-md">
+                <span className="text-[11px] font-mono font-bold text-[#e5c05b]">
+                  Google Avaliações 5.0 ★
+                </span>
+                <span className="text-[10px] text-slate-300 bg-slate-900 px-2 py-0.5 rounded border border-slate-800">
+                  100% Verificado
+                </span>
               </div>
             </div>
 

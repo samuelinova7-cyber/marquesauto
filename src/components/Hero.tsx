@@ -114,8 +114,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
                 </span>
               </div>
 
-              {/* Floating Highlight Card on video */}
-              <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-slate-700/80 bg-[#0d1017]/95 p-4 backdrop-blur-md shadow-lg z-10">
+              {/* Floating Highlight Card on video (Desktop only, overlaying) */}
+              <div className="hidden sm:block absolute bottom-4 left-4 right-4 rounded-xl border border-slate-700/80 bg-[#0d1017]/95 p-4 backdrop-blur-md shadow-lg z-10">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <span className="text-[11px] font-semibold uppercase tracking-wider text-[#d4af37] flex items-center gap-1.5">
@@ -131,6 +131,25 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
                     100% Brilho
                   </span>
                 </div>
+              </div>
+            </div>
+
+            {/* Mobile version: Card positioned cleanly BELOW the video (não em cima do vídeo) */}
+            <div className="sm:hidden mt-3 rounded-xl border border-[#d4af37]/40 bg-[#0d1017]/95 p-3.5 shadow-lg">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[#d4af37] flex items-center gap-1">
+                    <Sparkles className="h-3 w-3 text-[#e5c05b]" />
+                    Trabalho Real do Estúdio Marques
+                  </span>
+                  <h2 className="text-sm font-bold text-white mt-0.5">Acabamento Espelhado & PPF</h2>
+                  <p className="text-[11px] text-slate-400 mt-0.5 leading-snug">
+                    Vitrificação cerâmica de dureza 9H com reflexo óptico puro e repelência extrema.
+                  </p>
+                </div>
+                <span className="shrink-0 rounded-md bg-[#d4af37]/20 border border-[#d4af37]/50 px-2 py-0.5 text-[10px] font-mono font-bold text-[#e5c05b]">
+                  100% Brilho
+                </span>
               </div>
             </div>
           </div>
